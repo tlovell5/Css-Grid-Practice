@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    padding: 10px;
+    display: grid;
+    background-color: white;
+    height: 100%;
+    gap: 10px;
+}
+
+@media screen and (max-width: 767px)  {
+    main {
+        grid-template-areas: 
+        "header header header header" 
+        "sidebar1 sidebar1 sidebar1 sidebar1"
+        "contents contents contents contents"
+        "contents contents contents contents"
+        "sidebar2 sidebar2 sidebar2 sidebar2"
+        "footer footer footer footer";
+
+    }
+  } 
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    main {
+        grid-template-areas: 
+        "header header header header" 
+        "sidebar1 contents contents contents"
+        "sidebar1 contents contents contents"
+        "sidebar2 sidebar2 sidebar2 sidebar2"
+        "footer footer footer footer";
+
+    }
+  } 
+
+
+@media screen and (min-width: 1025px) {
+    main {
+        grid-template-areas: 
+        "header header header header" 
+        "sidebar1 contents contents sidebar2"
+        "sidebar1 contents contents sidebar2"
+        "footer footer footer footer";
+
+    }
+  }
+
+
+.header{
+    background-color: red;
+    grid-area: header;
+}
+.sideBar1{
+    background-color: green;
+    grid-area: sidebar1;
+
+}
+.contents{
+    background-color: purple;
+    grid-area: contents;
+
+}
+.sideBar2{
+    background-color: orange;
+    grid-area: sidebar2;
+
+}
+.footer{
+    background-color: yellow;
+    grid-area: footer;
+
+}
